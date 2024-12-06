@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Administration </title>
+</head>
+<body>
+  <div id="produkter-sidebar"> <div class="produkter-sidebar-title"> Produkter</div></div>
+  <div id="admin-banniere"> <h2>Administration</h2></div>
+  <div class="produkter-title">Ny Produkt</div>
+  <main id="NyProdukt-Form">
+    <form action="https://httpbin.org/get" method="get">  
+      <div>  
+        <div>
+          <label for="namn"> Namn </label>
+          <div><input type="text" placeholder="Ange namn" name="namn" id="namn" maxlength="50" required ></div>
+        </div>
+        <div>
+          <div> <label for="Beskrivning" >Beskrivning </label></div>
+          <textarea name="Beskrivning" id="Beskrivning" cols="30" rows="10"
+          placeholder="Ange beskrivning" ></textarea>
+        </div>
+      </div> 
+      <p>Bild</p>
+      <input type="file" id="myFile" lang="" name="filename" accept="image/png, image/gif, image/jpeg" required >
+      <div> 
+        <label for="SKU">SKU </label>
+        <div class="SKU"><input type="text" placeholder="Ange SKU" name="SKU" id="SKU" pattern="([A-Za-z]{3})([0-9]{3})" title="Must contain at least three letters and 3 numbers" required></div>
+      </div>
+      <div> 
+        <label for="Pris">Pris </label>
+          <div class="Pris"><input type="text"  name="Pris" id="Pris" ></div>
+      </div>
+      <div> 
+        <label for="Publiseringsdatum">Publiseringsdatum  </label>
+          <div class="Publiseringsdatum"><input type="date" name="Publiseringsdatum" id="Publiseringsdatum" ></div>
+      </div>
+    </form>
+    <section id="checkbox">
+      <div class="katego-p">Kategorier</div>
+      <div>
+      <input type="checkbox" name="kläder" id="T-Shirt" value="T-Shirt">
+      <label for="T-Shirt">T-Shirts</label>
+      </div>
+      <div>
+      <input type="checkbox" name="kläder" id="Sommar" value="Sommar">
+      <label for="Sommar">Sommar</label>
+      </div>
+      <div>
+      <input type="checkbox" name="kläder" id="Byxor" value="Byxor">
+      <label for="Byxor">Byxor</label>
+      </div>
+      <div>
+      <input type="checkbox" name="kläder" id="Skor" value="Skor">
+      <label for="Skor">Skor</label>
+      </div>
+      <button>Lägg till</button>
+    </section>    
+  </main>
+</body>
+</html>
